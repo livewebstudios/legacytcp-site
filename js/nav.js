@@ -5,7 +5,7 @@
 */
 (function() {
   // Detect depth from root
-  // Calculate depth accounting for /newhtml/ or /newsite/ testing prefix
+  // Calculate depth accounting for /newhtml/ or / testing prefix
   const pathParts = window.location.pathname.split('/').filter(Boolean);
   const testPrefixes = ['newhtml', 'newsite'];
   const startIdx = testPrefixes.includes(pathParts[0]) ? 1 : 0;
@@ -21,11 +21,11 @@
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
-        <a href="/newhtml/newsite/" class="logo-wrap" aria-label="Legacy Trust & Capital Partners — Home">
+        <a href="/newhtml/" class="logo-wrap" aria-label="Legacy Trust & Capital Partners — Home">
           <img src="/newhtml/images/logoRGB.png" alt="Legacy Trust & Capital Partners" class="site-logo" style="height:80px;width:auto;max-width:280px;">
         </a>
         <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-          <div class="nav-item"><a href="/newhtml/newsite/" class="nav-link" id="nav-home">Home</a></div>
+          <div class="nav-item"><a href="/newhtml/" class="nav-link" id="nav-home">Home</a></div>
           <div class="nav-item">
             <span class="nav-link" id="nav-about">About <span class="caret">▾</span></span>
             <div class="dropdown">
@@ -123,7 +123,7 @@
         <div class="footer-col">
           <span class="footer-col-title">Navigation</span>
           <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="/newhtml/newsite/">Home</a>
+            <a href="/newhtml/">Home</a>
             <a href="/newhtml/about-us/">About</a>
             <a href="/newhtml/services/">Services</a>
             <a href="/newhtml/contact/">Contact</a>

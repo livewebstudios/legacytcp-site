@@ -5,7 +5,7 @@
 */
 (function() {
   // Detect depth from root
-  // Calculate depth accounting for /newsite/ or /newsite/ testing prefix
+  // Calculate depth accounting for / or / testing prefix
   const pathParts = window.location.pathname.split('/').filter(Boolean);
   const testPrefixes = ['newhtml', 'newsite'];
   const startIdx = testPrefixes.includes(pathParts[0]) ? 1 : 0;
@@ -21,18 +21,18 @@
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
-        <a href="/newsite/" class="logo-wrap" aria-label="Legacy Trust & Capital Partners — Home">
-          <img src="/newsite/images/logoRGB.png" alt="Legacy Trust & Capital Partners" class="site-logo" style="height:80px;width:auto;max-width:280px;">
+        <a href="/" class="logo-wrap" aria-label="Legacy Trust & Capital Partners — Home">
+          <img src="/images/logoRGB.png" alt="Legacy Trust & Capital Partners" class="site-logo" style="height:80px;width:auto;max-width:280px;">
         </a>
         <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-          <div class="nav-item"><a href="/newsite/" class="nav-link" id="nav-home">Home</a></div>
+          <div class="nav-item"><a href="/" class="nav-link" id="nav-home">Home</a></div>
           <div class="nav-item">
             <span class="nav-link" id="nav-about">About <span class="caret">▾</span></span>
             <div class="dropdown">
-              <a href="/newsite/about-us/">About Us</a>
-              <a href="/newsite/about-us/#mission">Our Mission</a>
-              <a href="/newsite/about-us/#approach">Our Approach</a>
-              <a href="/newsite/about-us/#team">Our Team Members</a>
+              <a href="/about-us/">About Us</a>
+              <a href="/about-us/#mission">Our Mission</a>
+              <a href="/about-us/#approach">Our Approach</a>
+              <a href="/about-us/#team">Our Team Members</a>
             </div>
           </div>
           <div class="nav-item">
@@ -40,62 +40,62 @@
             <div class="mega-dropdown">
               <div class="mega-col">
                 <span class="mega-col-title">Financial Planning</span>
-                <a href="/newsite/services/financial-planning/">Financial Planning</a>
-                <a href="/newsite/services/financial-planning/retirement-planning/">Retirement Planning</a>
-                <a href="/newsite/services/financial-planning/portfolio-management/">Portfolio Management</a>
-                <a href="/newsite/services/financial-planning/corporate-retirement-plans/">Corporate Retirement Plans</a>
+                <a href="/services/financial-planning/">Financial Planning</a>
+                <a href="/services/financial-planning/retirement-planning/">Retirement Planning</a>
+                <a href="/services/financial-planning/portfolio-management/">Portfolio Management</a>
+                <a href="/services/financial-planning/corporate-retirement-plans/">Corporate Retirement Plans</a>
               </div>
               <div class="mega-col">
                 <span class="mega-col-title">Insurance Solutions</span>
-                <a href="/newsite/services/insurance-solutions/">Insurance Solutions</a>
-                <a href="/newsite/services/insurance-solutions/personal-insurance/">Personal Insurance</a>
-                <a href="/newsite/services/insurance-solutions/personal-insurance/life-insurance/">Life Insurance</a>
-                <a href="/newsite/services/insurance-solutions/personal-insurance/long-term-care-insurance/">Long-Term Care Insurance</a>
-                <a href="/newsite/services/insurance-solutions/personal-insurance/disability-insurance/">Disability Insurance</a>
-                <a href="/newsite/services/insurance-solutions/commercial-insurance/">Commercial Insurance</a>
-                <a href="/newsite/services/insurance-solutions/employee-benefit-plans/">Employee Benefit Plans</a>
-                <a href="/newsite/services/insurance-solutions/needs-analysis/">Needs Analysis</a>
-                <a href="/newsite/services/insurance-solutions/property-and-casualty-insurance/">Property &amp; Casualty</a>
+                <a href="/services/insurance-solutions/">Insurance Solutions</a>
+                <a href="/services/insurance-solutions/personal-insurance/">Personal Insurance</a>
+                <a href="/services/insurance-solutions/personal-insurance/life-insurance/">Life Insurance</a>
+                <a href="/services/insurance-solutions/personal-insurance/long-term-care-insurance/">Long-Term Care Insurance</a>
+                <a href="/services/insurance-solutions/personal-insurance/disability-insurance/">Disability Insurance</a>
+                <a href="/services/insurance-solutions/commercial-insurance/">Commercial Insurance</a>
+                <a href="/services/insurance-solutions/employee-benefit-plans/">Employee Benefit Plans</a>
+                <a href="/services/insurance-solutions/needs-analysis/">Needs Analysis</a>
+                <a href="/services/insurance-solutions/property-and-casualty-insurance/">Property &amp; Casualty</a>
               </div>
               <div class="mega-col">
                 <span class="mega-col-title">Accounting Services</span>
-                <a href="/newsite/services/accounting-services/">Accounting Services</a>
-                <a href="/newsite/services/accounting-services/tax-preparation-and-efficiency-planning/">Tax Prep &amp; Efficiency Planning</a>
-                <a href="/newsite/services/accounting-services/corporate-compliance-and-bookkeeping/">Corporate Compliance &amp; Bookkeeping</a>
+                <a href="/services/accounting-services/">Accounting Services</a>
+                <a href="/services/accounting-services/tax-preparation-and-efficiency-planning/">Tax Prep &amp; Efficiency Planning</a>
+                <a href="/services/accounting-services/corporate-compliance-and-bookkeeping/">Corporate Compliance &amp; Bookkeeping</a>
               </div>
               <div class="mega-col">
                 <span class="mega-col-title">Legal Services</span>
-                <a href="/newsite/services/legal-services/">Legal Services</a>
+                <a href="/services/legal-services/">Legal Services</a>
                 <div class="mega-sub-group">
-                  <a href="/newsite/services/legal-services/estate-planning/" class="mega-sub-parent">Estate Planning ›</a>
+                  <a href="/services/legal-services/estate-planning/" class="mega-sub-parent">Estate Planning ›</a>
                   <div class="mega-sub-dropdown">
-                    <a href="/newsite/services/legal-services/estate-planning/wills/">Wills</a>
-                    <a href="/newsite/services/legal-services/estate-planning/trusts/">Trusts</a>
+                    <a href="/services/legal-services/estate-planning/wills/">Wills</a>
+                    <a href="/services/legal-services/estate-planning/trusts/">Trusts</a>
                   </div>
                 </div>
                 <div class="mega-sub-group">
-                  <a href="/newsite/services/legal-services/long-term-care-planning/" class="mega-sub-parent">Long-Term Care Planning ›</a>
+                  <a href="/services/legal-services/long-term-care-planning/" class="mega-sub-parent">Long-Term Care Planning ›</a>
                   <div class="mega-sub-dropdown">
-                    <a href="/newsite/services/legal-services/long-term-care-planning/asset-protection/">Asset Protection</a>
-                    <a href="/newsite/services/legal-services/long-term-care-planning/medicaid/">Medicaid</a>
+                    <a href="/services/legal-services/long-term-care-planning/asset-protection/">Asset Protection</a>
+                    <a href="/services/legal-services/long-term-care-planning/medicaid/">Medicaid</a>
                   </div>
                 </div>
-                <a href="/newsite/services/legal-services/business-formation/">Business Formation</a>
-                <a href="/newsite/services/legal-services/business-succession-planning/">Business Succession Planning</a>
-                <a href="/newsite/services/legal-services/probate-and-estate-administration/">Probate &amp; Estate Admin</a>
+                <a href="/services/legal-services/business-formation/">Business Formation</a>
+                <a href="/services/legal-services/business-succession-planning/">Business Succession Planning</a>
+                <a href="/services/legal-services/probate-and-estate-administration/">Probate &amp; Estate Admin</a>
               </div>
             </div>
           </div>
           <div class="nav-item">
             <span class="nav-link" id="nav-resources">Client Resources <span class="caret">▾</span></span>
             <div class="dropdown">
-              <a href="/newsite/client-resources/disclosures/">Disclosures</a>
-              <a href="/newsite/client-resources/forms/">Forms</a>
-              <a href="/newsite/client-resources/privacy-policy/">Privacy Policy</a>
-              <a href="/newsite/client-resources/terms-and-conditions/">Terms &amp; Conditions</a>
+              <a href="/client-resources/disclosures/">Disclosures</a>
+              <a href="/client-resources/forms/">Forms</a>
+              <a href="/client-resources/privacy-policy/">Privacy Policy</a>
+              <a href="/client-resources/terms-and-conditions/">Terms &amp; Conditions</a>
             </div>
           </div>
-          <div class="nav-item"><a href="/newsite/contact/" class="nav-link" id="nav-contact">Contact</a></div>
+          <div class="nav-item"><a href="/contact/" class="nav-link" id="nav-contact">Contact</a></div>
           <button class="nav-search-btn" aria-label="Search">🔍</button>
         </nav>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
@@ -110,23 +110,23 @@
     </svg>
   </div>
   <footer class="site-footer">
-    <div class="footer-photo" style="background-image: url('/newsite/images/contact.jpg');"></div>
+    <div class="footer-photo" style="background-image: url('/images/contact.jpg');"></div>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-col">
           <span class="footer-col-title">About Us</span>
           <p>Legacy Trust &amp; Capital Partners offers integrated financial services, including planning, asset management, estate planning, insurance, tax preparation, and business law. Our expert team delivers personalized solutions to secure and grow your legacy.</p>
           <div class="footer-logo" style="margin-top:16px;">
-            <img src="/newsite/images/icontcp.jpg" alt="Legacy Trust &amp; Capital Partners" style="width:60px;height:60px;display:block;">
+            <img src="/images/icontcp.jpg" alt="Legacy Trust &amp; Capital Partners" style="width:60px;height:60px;display:block;">
           </div>
         </div>
         <div class="footer-col">
           <span class="footer-col-title">Navigation</span>
           <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="/newsite/">Home</a>
-            <a href="/newsite/about-us/">About</a>
-            <a href="/newsite/services/">Services</a>
-            <a href="/newsite/contact/">Contact</a>
+            <a href="/">Home</a>
+            <a href="/about-us/">About</a>
+            <a href="/services/">Services</a>
+            <a href="/contact/">Contact</a>
           </nav>
         </div>
         <div class="footer-col">
@@ -141,17 +141,17 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-legal-links">
-          <a href="/newsite/client-resources/privacy-policy/">Privacy Policy</a>
+          <a href="/client-resources/privacy-policy/">Privacy Policy</a>
           <span>|</span>
-          <a href="/newsite/client-resources/terms-and-conditions/">Terms And Conditions</a>
+          <a href="/client-resources/terms-and-conditions/">Terms And Conditions</a>
           <span>|</span>
-          <a href="/newsite/client-resources/disclosures/">Disclosures</a>
+          <a href="/client-resources/disclosures/">Disclosures</a>
         </div>
         <div class="footer-copy">
           &copy;2026 <a href="https://livewebstudios.com" target="_blank" rel="noopener">LiveWebStudios.com</a> – Powered by <a href="https://livewebstudios.com" target="_blank" rel="noopener">Live Web Studios</a>
         </div>
         <a href="https://livewebstudios.com" target="_blank" rel="noopener">
-          <img src="/newsite/images/verifiedsecured.png" alt="Verified &amp; Secured by Live Web Studios" style="height:44px;width:auto;">
+          <img src="/images/verifiedsecured.png" alt="Verified &amp; Secured by Live Web Studios" style="height:44px;width:auto;">
         </a>
       </div>
     </div>
@@ -175,7 +175,7 @@
  
   // Active nav state
   const path = window.location.pathname;
-  if (path === '/' || path === '/newsite/' || path === '/newhtml') {
+  if (path === '/' || path === '/' || path === '/newhtml') {
     const el = document.getElementById('nav-home');
     if (el) el.classList.add('active');
   } else if (path.includes('/about-us')) {
