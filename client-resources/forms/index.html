@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Forms | Legacy Trust & Capital Partners</title>
+  <meta name="description" content="Download client forms from Legacy Trust & Capital Partners — estate document checklists, client questionnaires, investor profiles, and budget worksheets.">
+  <link rel="canonical" href="https://legacytcp.com/client-resources/forms/">
+    <link rel="icon" type="image/x-icon" href="/newsite/favicon.ico">
+  <link rel="stylesheet" href="/newsite/css/legacytcp2.css">
+  <style>
+    .forms-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:30px; }
+    .form-card { background:var(--white); border:1px solid var(--border); border-radius:6px; padding:28px 24px; box-shadow:0 2px 8px rgba(27,45,94,.06); display:flex; gap:18px; align-items:flex-start; transition:box-shadow .25s,transform .25s; }
+    .form-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); }
+    .form-icon { flex-shrink:0; width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:20px; }
+    .form-icon.pdf-icon { background:rgba(220,53,53,.1); }
+    .form-icon.xls-icon { background:rgba(34,139,34,.1); }
+    .form-card h3 { font-family:var(--font-head); font-size:15px; font-weight:700; color:var(--navy); margin-bottom:6px; }
+    .form-card p { font-size:13px; color:var(--text-mid); line-height:1.7; margin-bottom:12px; }
+    .form-download { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-head); font-size:12px; font-weight:600; color:var(--teal); letter-spacing:.05em; text-transform:uppercase; transition:color .2s; }
+    .form-download:hover { color:var(--navy); }
+    .forms-note { background:var(--offwhite); border:1px solid var(--border); border-radius:6px; padding:20px 24px; margin-top:40px; font-size:13.5px; color:var(--text-mid); line-height:1.8; }
+    .forms-note strong { color:var(--navy); }
+    @media(max-width:700px){.forms-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('../../images/legal-services.jpg');"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="page-hero-sub">Coordinating Wealth, Protecting Legacies</p>
+        <h1>Forms</h1>
+        <p>High performance requires bold leadership, vigilant integrity and a culture of collaboration for constant improvement.</p>
+      </div>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px;width:100%;display:block;" fill="#ffffff">
+        <path d="M0,0 C480,80 960,80 1440,0 L1440,80 L0,80 Z"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:50px; padding-bottom:80px;">
+    <div class="container">
+      <div class="section-inner">
+        <div class="ghost-text dark">About</div>
+        <h2 class="section-title">Forms</h2>
+        <div class="section-divider left"></div>
+
+        <div class="forms-grid">
+          <div class="form-card">
+            <div class="form-icon pdf-icon">📄</div>
+            <div>
+              <h3>Wills And Supporting Estate Documents Checklist</h3>
+              <p>A comprehensive checklist to help you gather and organize all documents needed for your estate planning process.</p>
+              <!-- REPLACE href WITH ACTUAL PDF PATH WHEN FILES ARE UPLOADED -->
+              <a href="/newsite/client-resources/forms/wills-estate-documents-checklist.pdf" class="form-download" target="_blank">📥 View PDF</a>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-icon pdf-icon">📄</div>
+            <div>
+              <h3>Confidential Client Questionnaire</h3>
+              <p>Please complete this questionnaire prior to your initial consultation so we can better understand your financial situation and goals.</p>
+              <!-- REPLACE href WITH ACTUAL PDF PATH WHEN FILES ARE UPLOADED -->
+              <a href="/newsite/client-resources/forms/confidential-client-questionnaire.pdf" class="form-download" target="_blank">📥 View PDF</a>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-icon pdf-icon">📄</div>
+            <div>
+              <h3>Investor Profile Questionnaire</h3>
+              <p>Help us understand your investment objectives, risk tolerance, and time horizon so we can build the right strategy for you.</p>
+              <!-- REPLACE href WITH ACTUAL PDF PATH WHEN FILES ARE UPLOADED -->
+              <a href="/newsite/client-resources/forms/investor-profile-questionnaire.pdf" class="form-download" target="_blank">📥 View PDF</a>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-icon xls-icon">📊</div>
+            <div>
+              <h3>Monthly Spending: What's Your Budget?</h3>
+              <p>An interactive Excel worksheet to track your monthly income and expenses and identify opportunities for savings and growth.</p>
+              <!-- REPLACE href WITH ACTUAL EXCEL PATH WHEN FILES ARE UPLOADED -->
+              <a href="/newsite/client-resources/forms/monthly-spending-budget.xlsx" class="form-download" target="_blank">📥 View Excel Form</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="forms-note">
+          <strong>Note:</strong> The PDF and Excel files linked above need to be uploaded to the server at the paths shown. If you have the original files from the client, upload them to <code>public_html/client-resources/forms/</code> and the links will work automatically. Contact <a href="/newsite/contact/" style="color:var(--teal);">our office</a> if you need assistance accessing any of these forms.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/newsite/js/nav2.js"></script>
+  <script src="/newsite/js/scroll-fx.js"></script>
+</body>
+</html>
