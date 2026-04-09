@@ -1,0 +1,17 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/client-resources/blog/"
+  to = "/blog/"
+  status = 301
+  force = true

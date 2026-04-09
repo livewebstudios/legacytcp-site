@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} | Legacy Trust &amp; Capital Partners</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://legacytcp.com/blog/{{SLUG}}/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{TITLE}} | Legacy Trust &amp; Capital Partners">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="https://legacytcp.com/blog/{{SLUG}}/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{{OG_IMAGE}}">
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{TITLE}}",
+    "description": "{{DESCRIPTION}}",
+    "datePublished": "{{DATE_ISO}}",
+    "author": {
+      "@type": "Organization",
+      "name": "Legacy Trust & Capital Partners",
+      "url": "https://legacytcp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Legacy Trust & Capital Partners",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://legacytcp.com/images/logoRGB.png"
+      }
+    },
+    "mainEntityOfPage": "https://legacytcp.com/blog/{{SLUG}}/"
+  }
+  </script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/legacytcp2.css">
+  <style>
+    /* Blog layout */
+    .blog-layout { display:grid; grid-template-columns:1fr 300px; gap:40px; align-items:start; margin-top:30px; }
+    /* Article typography */
+    .blog-article h2 { font-family:var(--font-head); font-size:22px; font-weight:700; color:var(--navy); margin:32px 0 12px; }
+    .blog-article h3 { font-family:var(--font-head); font-size:18px; font-weight:700; color:var(--navy); margin:24px 0 10px; }
+    .blog-article h4 { font-family:var(--font-head); font-size:16px; font-weight:700; color:var(--navy); margin:20px 0 8px; }
+    .blog-article p { font-size:15px; color:var(--text-mid); line-height:1.85; margin-bottom:18px; }
+    .blog-article ul, .blog-article ol { margin:12px 0 18px 24px; font-size:15px; color:var(--text-mid); line-height:1.85; }
+    .blog-article li { margin-bottom:6px; }
+    .blog-article img { max-width:100%; height:auto; border-radius:var(--radius); margin:20px 0; box-shadow:var(--shadow); }
+    .blog-article blockquote { border-left:3px solid var(--teal); padding:12px 20px; margin:20px 0; background:var(--offwhite); font-style:italic; color:var(--text-mid); }
+    .blog-article a { color:var(--teal); text-decoration:underline; }
+    .blog-article a:hover { color:var(--navy); }
+    .blog-article strong { color:var(--text-dark); }
+    .blog-back { display:inline-flex; align-items:center; gap:6px; font-family:var(--font-head); font-size:13px; font-weight:600; color:var(--teal); letter-spacing:.04em; text-transform:uppercase; margin-bottom:24px; transition:color .2s; }
+    .blog-back:hover { color:var(--navy); }
+    /* Sidebar */
+    .blog-sidebar { position:sticky; top:90px; }
+    .sidebar-widget { background:var(--white); border:1px solid var(--border); border-radius:6px; padding:24px; margin-bottom:24px; }
+    .sidebar-widget-title { font-family:var(--font-head); font-size:13px; font-weight:700; color:var(--navy); letter-spacing:.08em; text-transform:uppercase; padding-bottom:10px; border-bottom:2px solid var(--teal); margin-bottom:14px; }
+    .recent-post-item { padding:8px 0; border-bottom:1px solid var(--border); }
+    .recent-post-item:last-child { border-bottom:none; }
+    .recent-post-item a { font-family:var(--font-head); font-size:12.5px; font-weight:600; color:var(--navy); line-height:1.5; transition:color .2s; }
+    .recent-post-item a:hover { color:var(--teal); }
+    .category-list { display:flex; flex-direction:column; gap:4px; }
+    .category-list a { font-family:var(--font-head); font-size:13px; font-weight:500; color:var(--teal); padding:4px 0; transition:color .2s, padding-left .2s; }
+    .category-list a:hover { color:var(--navy); padding-left:4px; }
+    @media(max-width:900px){ .blog-layout{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+  <section class="page-hero" style="text-align:center;">
+    <div class="page-hero-bg" style="background-image:url('{{HERO_IMAGE}}');"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="page-hero-sub">{{CATEGORY}}</p>
+        <h1>{{TITLE}}</h1>
+        <p>{{DATE_FORMATTED}}</p>
+      </div>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px;width:100%;display:block;" fill="#ffffff">
+        <path d="M0,0 C480,80 960,80 1440,0 L1440,80 L0,80 Z"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:50px; padding-bottom:80px;">
+    <div class="container">
+      <div class="blog-layout">
+        <div>
+          <a href="/blog/" class="blog-back">&larr; Back to Blog</a>
+          <article class="blog-article">
+            {{CONTENT}}
+          </article>
+        </div>
+        <aside class="blog-sidebar">
+          {{SIDEBAR}}
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="container">
+      <p>This commentary reflects the personal opinions, viewpoints and analyses of the Legacy Trust &amp; Capital Partners employees providing such comments, and should not be regarded as a description of advisory services provided by Legacy Trust &amp; Capital Partners or performance returns of any Legacy Trust &amp; Capital Partners client. The views reflected in the commentary are subject to change at any time without notice. Nothing in this commentary constitutes investment advice, performance data or any recommendation that any particular security, portfolio of securities, transaction or investment strategy is suitable for any specific person. Any mention of a particular security and related performance data is not a recommendation to buy or sell that security. Legacy Trust &amp; Capital Partners manages its clients' accounts using a variety of investment techniques and strategies, which are not necessarily discussed in the commentary. Investments in securities involve the risk of loss. Past performance is no guarantee of future results.</p>
+    </div>
+  </section>
+
+  <script src="/js/nav2.js"></script>
+  <script src="/js/scroll-fx.js"></script>
+</body>
+</html>

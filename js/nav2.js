@@ -95,6 +95,7 @@
               <a href="/client-resources/terms-and-conditions/">Terms &amp; Conditions</a>
             </div>
           </div>
+          <div class="nav-item"><a href="/blog/" class="nav-link" id="nav-blog">Blog</a></div>
           <div class="nav-item"><a href="/contact/" class="nav-link" id="nav-contact">Contact</a></div>
           <button class="nav-search-btn" aria-label="Search">🔍</button>
         </nav>
@@ -126,6 +127,7 @@
             <a href="/">Home</a>
             <a href="/about-us/">About</a>
             <a href="/services/">Services</a>
+            <a href="/blog/">Blog</a>
             <a href="/contact/">Contact</a>
           </nav>
         </div>
@@ -186,6 +188,9 @@
     if (el) el.classList.add('active');
   } else if (path.includes('/client-resources')) {
     const el = document.getElementById('nav-resources');
+    if (el) el.classList.add('active');
+  } else if (path.includes('/blog')) {
+    const el = document.getElementById('nav-blog');
     if (el) el.classList.add('active');
   } else if (path.includes('/contact')) {
     const el = document.getElementById('nav-contact');

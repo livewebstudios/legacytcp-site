@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — News From The World Of Money | Legacy Trust &amp; Capital Partners</title>
+  <meta name="description" content="Stay informed with insights on financial planning, estate planning, insurance, investment strategies, and tax updates from Legacy Trust &amp; Capital Partners.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://legacytcp.com/blog/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog — News From The World Of Money | Legacy Trust &amp; Capital Partners">
+  <meta property="og:description" content="Stay informed with insights on financial planning, estate planning, insurance, investment strategies, and tax updates.">
+  <meta property="og:url" content="https://legacytcp.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://legacytcp.com/images/about-us.jpg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/legacytcp2.css">
+  <style>
+    .blog-layout { display:grid; grid-template-columns:1fr 300px; gap:40px; align-items:start; margin-top:30px; }
+    .blog-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    .blog-post-card { background:var(--white); border:1px solid var(--border); border-radius:6px; overflow:hidden; box-shadow:0 2px 8px rgba(27,45,94,.06); transition:box-shadow .25s, transform .25s; }
+    .blog-post-card:hover { box-shadow:var(--shadow); transform:translateY(-3px); }
+    .blog-post-card img { width:100%; height:200px; object-fit:cover; display:block; }
+    .blog-post-card .card-no-img { height:200px; background:linear-gradient(135deg,var(--navy) 0%,#294880 100%); display:flex; align-items:center; justify-content:center; }
+    .blog-post-card .card-no-img span { font-family:var(--font-head); font-size:13px; font-weight:600; color:rgba(255,255,255,.5); letter-spacing:.06em; text-transform:uppercase; }
+    .card-body { padding:20px; }
+    .card-meta { font-family:var(--font-head); font-size:11px; font-weight:600; color:var(--teal); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+    .card-title a { font-family:var(--font-head); font-size:15px; font-weight:700; color:var(--navy); line-height:1.4; transition:color .2s; }
+    .card-title a:hover { color:var(--teal); }
+    .card-excerpt { font-size:13.5px; color:var(--text-mid); line-height:1.75; margin:10px 0 14px; }
+    .card-read-more { font-family:var(--font-head); font-size:12px; font-weight:600; color:var(--teal); letter-spacing:.06em; text-transform:uppercase; display:inline-flex; align-items:center; gap:4px; transition:color .2s; }
+    .card-read-more:hover { color:var(--navy); }
+    /* Sidebar */
+    .blog-sidebar { position:sticky; top:90px; }
+    .sidebar-widget { background:var(--white); border:1px solid var(--border); border-radius:6px; padding:24px; margin-bottom:24px; }
+    .sidebar-widget-title { font-family:var(--font-head); font-size:13px; font-weight:700; color:var(--navy); letter-spacing:.08em; text-transform:uppercase; padding-bottom:10px; border-bottom:2px solid var(--teal); margin-bottom:14px; }
+    .recent-post-item { padding:8px 0; border-bottom:1px solid var(--border); }
+    .recent-post-item:last-child { border-bottom:none; }
+    .recent-post-item a { font-family:var(--font-head); font-size:12.5px; font-weight:600; color:var(--navy); line-height:1.5; transition:color .2s; }
+    .recent-post-item a:hover { color:var(--teal); }
+    .category-list { display:flex; flex-direction:column; gap:4px; }
+    .category-list a { font-family:var(--font-head); font-size:13px; font-weight:500; color:var(--teal); padding:4px 0; transition:color .2s, padding-left .2s; }
+    .category-list a:hover { color:var(--navy); padding-left:4px; }
+    @media(max-width:900px){ .blog-layout{grid-template-columns:1fr;} .blog-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+  <section class="page-hero" style="text-align:center;">
+    <div class="page-hero-bg" style="background-image:url('/images/about-us.jpg');"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="page-hero-sub">One team. One vision. Comprehensive solutions.</p>
+        <h1>Blog</h1>
+        <p>News From The World Of Money</p>
+      </div>
+    </div>
+    <div class="page-hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px;width:100%;display:block;" fill="#ffffff">
+        <path d="M0,0 C480,80 960,80 1440,0 L1440,80 L0,80 Z"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:50px; padding-bottom:80px;">
+    <div class="container">
+      <div class="blog-layout">
+        <div class="blog-grid">
+          {{BLOG_CARDS}}
+        </div>
+        <aside class="blog-sidebar">
+          {{SIDEBAR}}
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="container">
+      <p>This commentary reflects the personal opinions, viewpoints and analyses of the Legacy Trust &amp; Capital Partners employees providing such comments, and should not be regarded as a description of advisory services provided by Legacy Trust &amp; Capital Partners or performance returns of any Legacy Trust &amp; Capital Partners client. The views reflected in the commentary are subject to change at any time without notice. Nothing in this commentary constitutes investment advice, performance data or any recommendation that any particular security, portfolio of securities, transaction or investment strategy is suitable for any specific person. Any mention of a particular security and related performance data is not a recommendation to buy or sell that security. Legacy Trust &amp; Capital Partners manages its clients' accounts using a variety of investment techniques and strategies, which are not necessarily discussed in the commentary. Investments in securities involve the risk of loss. Past performance is no guarantee of future results.</p>
+    </div>
+  </section>
+
+  <script src="/js/nav2.js"></script>
+  <script src="/js/scroll-fx.js"></script>
+</body>
+</html>

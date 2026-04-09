@@ -47,6 +47,7 @@
   </script>
   <!-- GA4 Placeholder -->
   <!-- Google tag (gtag.js) — ADD GA4 ID BEFORE LAUNCH -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/legacytcp2.css">
 </head>
@@ -376,5 +377,16 @@
 
   <script src="/js/nav2.js"></script>
   <script src="/js/scroll-fx.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
