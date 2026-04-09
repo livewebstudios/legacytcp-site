@@ -11,8 +11,17 @@
   <style>
     .lws-badge{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:1;opacity:.7;transition:opacity .2s;}
     .lws-badge:hover{opacity:1;}
-    a[href*="decapcms.org"],a[href*="netlify.com"]{display:none!important;}
+    a[href*="decapcms"],a[href*="netlify"]{display:none!important;}
+    img[src*="decap"],img[alt*="ecap"]{display:none!important;}
   </style>
+  <script>
+    setInterval(function(){
+      document.querySelectorAll('a[href*="decapcms"],a[href*="netlify"],img[alt*="ecap"]').forEach(function(el){
+        var p=el.closest('div,span,p');
+        if(p)p.remove();else el.remove();
+      });
+    },500);
+  </script>
   <a href="https://livewebstudios.com" target="_blank" rel="noopener" class="lws-badge">
     <img src="/images/verifiedsecured.png" alt="Verified &amp; Secured by Live Web Studios" style="height:44px;width:auto;">
   </a>
