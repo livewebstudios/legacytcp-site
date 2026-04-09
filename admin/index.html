@@ -9,18 +9,33 @@
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <style>
-    .lws-badge{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:1;opacity:.7;transition:opacity .2s;}
+    .lws-badge{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:9999;opacity:.7;transition:opacity .2s;}
     .lws-badge:hover{opacity:1;}
-    a[href*="decapcms"],a[href*="netlify"]{display:none!important;}
-    img[src*="decap"],img[alt*="ecap"]{display:none!important;}
   </style>
   <script>
     setInterval(function(){
-      document.querySelectorAll('a[href*="decapcms"],a[href*="netlify"],img[alt*="ecap"]').forEach(function(el){
-        var p=el.closest('div,span,p');
-        if(p)p.remove();else el.remove();
+      // Remove any link pointing to decapcms or netlify
+      document.querySelectorAll('a').forEach(function(a){
+        var h=a.getAttribute('href')||'';
+        if(h.indexOf('decapcms')>-1||h.indexOf('netlify')>-1){
+          a.parentElement?a.parentElement.remove():a.remove();
+        }
       });
-    },500);
+      // Remove any img with decap in src or alt
+      document.querySelectorAll('img').forEach(function(img){
+        var s=(img.getAttribute('src')||'')+(img.getAttribute('alt')||'');
+        if(/decap/i.test(s)&&!img.closest('.lws-badge')){
+          img.parentElement?img.parentElement.remove():img.remove();
+        }
+      });
+      // Remove any SVG with decap text nearby
+      document.querySelectorAll('svg').forEach(function(svg){
+        var parent=svg.parentElement;
+        if(parent&&/decap/i.test(parent.textContent)&&!parent.closest('.lws-badge')){
+          parent.remove();
+        }
+      });
+    },300);
   </script>
   <a href="https://livewebstudios.com" target="_blank" rel="noopener" class="lws-badge">
     <img src="/images/verifiedsecured.png" alt="Verified &amp; Secured by Live Web Studios" style="height:44px;width:auto;">
