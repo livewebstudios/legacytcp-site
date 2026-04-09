@@ -14,26 +14,12 @@
   </style>
   <script>
     setInterval(function(){
-      // Remove any link pointing to decapcms or netlify
+      // Remove Decap/Netlify credit icon (SPAN with NetlifyCreditIcon class)
+      document.querySelectorAll('[class*="NetlifyCredit"],[class*="CustomIconWrapper"]').forEach(function(el){el.remove();});
+      // Remove any stray links to decapcms.org or netlify
       document.querySelectorAll('a').forEach(function(a){
         var h=a.getAttribute('href')||'';
-        if(h.indexOf('decapcms')>-1||h.indexOf('netlify')>-1){
-          a.parentElement?a.parentElement.remove():a.remove();
-        }
-      });
-      // Remove any img with decap in src or alt
-      document.querySelectorAll('img').forEach(function(img){
-        var s=(img.getAttribute('src')||'')+(img.getAttribute('alt')||'');
-        if(/decap/i.test(s)&&!img.closest('.lws-badge')){
-          img.parentElement?img.parentElement.remove():img.remove();
-        }
-      });
-      // Remove any SVG with decap text nearby
-      document.querySelectorAll('svg').forEach(function(svg){
-        var parent=svg.parentElement;
-        if(parent&&/decap/i.test(parent.textContent)&&!parent.closest('.lws-badge')){
-          parent.remove();
-        }
+        if(h.indexOf('decapcms')>-1){a.remove();}
       });
     },300);
   </script>
