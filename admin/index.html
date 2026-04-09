@@ -15,7 +15,7 @@
   <script>
     setInterval(function(){
       // Remove Decap/Netlify credit icon (SPAN with NetlifyCreditIcon class)
-      document.querySelectorAll('[class*="NetlifyCredit"],[class*="CustomIconWrapper"]').forEach(function(el){el.remove();});
+      document.querySelectorAll('[class*="NetlifyCredit"]').forEach(function(el){el.remove();});
       // Remove any stray links to decapcms.org or netlify
       document.querySelectorAll('a').forEach(function(a){
         var h=a.getAttribute('href')||'';
