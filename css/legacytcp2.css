@@ -832,6 +832,16 @@ ul { list-style: none; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .team-grid { grid-template-columns: 1fr; }
   .commitment-inner { flex-direction: column; }
+  /* Service-page inline two-column grids → stack on mobile, image last */
+  .section-inner > div[style*="grid-template-columns:1fr 1fr"],
+  .section-inner > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .section-inner > div[style*="grid-template-columns:1fr 1fr"] > div:has(> img),
+  .section-inner > div[style*="grid-template-columns: 1fr 1fr"] > div:has(> img) {
+    order: 2;
+  }
 }
 @media (max-width: 600px) {
   .hero-content h1 { font-size: 24px; }
