@@ -1008,7 +1008,7 @@ img[src*="logo-footer"],
 
 /* ── Insurance Inquiry Form ───────────────────────────────── */
 .ins-inquiry-form {
-  background: linear-gradient(rgba(26,111,168,0.82), rgba(26,111,168,0.82)), url('../images/insurance-solutions.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(26,72,128,0.87), rgba(26,72,128,0.87)), url('../images/insurance-solutions.jpg') center/cover no-repeat;
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius);
   padding: 24px;
@@ -1060,9 +1060,9 @@ img[src*="logo-footer"],
   cursor: pointer;
   border: none;
   background: var(--white);
-  color: #1a6fa8;
+  color: #1a4880;
 }
 .ins-inquiry-form .btn-solid:hover {
   background: rgba(255,255,255,0.88);
-  color: #1a6fa8;
+  color: #1a4880;
 }
