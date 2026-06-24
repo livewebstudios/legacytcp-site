@@ -818,6 +818,37 @@ ul { list-style: none; }
 }
 .disclosure p:last-child { margin-bottom: 0; }
 
+/* ── Newsletter popup video + section video overlay ───────────────────────────────────────────── */
+.newsletter-popup-video-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.newsletter-popup-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.16;
+}
+.section-video-bg {
+  position: relative;
+  overflow: hidden;
+}
+.section-video-bg .section-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.14;
+  z-index: 0;
+}
+.section-video-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 960px) {
   .main-nav { display: none; }
@@ -861,6 +892,236 @@ ul { list-style: none; }
   overflow-y: auto;
 }
 
+.newsletter-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 23, 47, 0.72);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 10000;
+}
+.newsletter-popup-overlay[hidden] {
+  display: none;
+}
+.newsletter-popup {
+  width: 720px; /* two 360px squares side-by-side */
+  height: 420px;
+  max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 48px);
+  background: transparent;
+  box-shadow: 0 28px 60px rgba(11, 23, 47, 0.22);
+  border-radius: 0; /* square corners */
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.newsletter-popup-video-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 0;
+}
+.newsletter-popup-video {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.36;
+  filter: saturate(1.15) contrast(1.08);
+}
+.newsletter-popup-frame {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 0; /* square corners */
+  border: 6px solid #1B2D5E; /* navy inner border */
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+}
+.newsletter-popup-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.newsletter-popup-photo {
+  flex: 0 0 50%;
+  overflow: hidden;
+}
+.newsletter-popup-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.newsletter-popup-form {
+  flex: 0 0 50%;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+  overflow: visible;
+}
+.newsletter-popup-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(27, 45, 94, 0.08);
+  color: var(--navy);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.newsletter-popup-header h2 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  line-height: 1.05;
+  letter-spacing: 0.06em;
+  margin: 4px 0 8px 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.newsletter-popup-header p {
+  color: var(--text-mid);
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 0 14px 0;
+}
+.newsletter-field-group {
+  margin-bottom: 18px;
+}
+.newsletter-field-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--navy);
+  letter-spacing: 0.08em;
+}
+.newsletter-field-group input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(27, 45, 94, 0.12);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-dark);
+  background: rgba(255,255,255,0.95);
+}
+.button-wrap {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+@supports ((--angle-1: 0deg)) {
+  @property --angle-1 {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: -75deg;
+  }
+  @property --angle-2 {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: -45deg;
+  }
+}
+.brand-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(180deg,#17345a 0%, #0f2750 100%);
+  color: #ffffff;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(11,23,47,0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+.brand-button:hover { transform: translateY(-2px); filter: brightness(1.03); }
+.brand-button:active { transform: translateY(0) scale(0.995); }
+.button-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  top: 0.5px;
+  left: 0.5px;
+  background: linear-gradient(var(--angle-2, -45deg), rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 40% 50%, rgba(255, 255, 255, 0) 55%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  transition: background-position 500ms cubic-bezier(0.25, 1, 0.5, 1), --angle-2 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+.glass-button:hover .button-shine {
+  background-position: 25% 50%;
+}
+.glass-button:active .button-shine {
+  background-position: 50% 15%;
+  --angle-2: -15deg;
+}
+.newsletter-privacy {
+  margin-top: 14px;
+  color: var(--text-light);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.newsletter-popup-bottom {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.newsletter-popup-link {
+  color: var(--navy);
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+body.newsletter-popup-open {
+  overflow: hidden;
+}
+
+@media (max-width: 760px) {
+  .newsletter-popup { width: calc(100vw - 32px); height: auto; max-height: calc(100vh - 48px); }
+  .newsletter-popup-frame { flex-direction: column; }
+  .newsletter-popup-photo { height: 160px; flex-basis: auto; }
+  .newsletter-popup-form { padding: 18px; }
+}
 
 /* Target all images EXCEPT logos and badge */
 

@@ -103,7 +103,30 @@
     });
   }
 
-  /* ── 5. HERO PARALLAX ──────────────────────────────────── */
+  /* ── 5. SECTION VIDEO BACKGROUND ───────────────────────── */
+  function initSectionVideo() {
+    const firstWhiteSection = Array.from(document.querySelectorAll('section.section, section.section-offwhite'))
+      .find(function (section) {
+        return !section.classList.contains('section-navy') && !section.classList.contains('why-section') && !section.classList.contains('team-section') && !section.classList.contains('disclaimer');
+      });
+
+    if (!firstWhiteSection || firstWhiteSection.querySelector('.section-background-video')) {
+      return;
+    }
+
+    firstWhiteSection.classList.add('section-video-bg');
+    const video = document.createElement('video');
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.src = '/video/ani-bg.mp4';
+    video.className = 'section-background-video';
+    video.setAttribute('aria-hidden', 'true');
+    firstWhiteSection.prepend(video);
+  }
+
+  /* ── 6. HERO PARALLAX ──────────────────────────────────── */
   function initParallax() {
     const heroBg = document.querySelector('.hero-bg');
     if (!heroBg) return; /* no hero on this page — bail silently */
@@ -127,10 +150,11 @@
     applyParallax();
   }
 
-  /* ── 6. INIT ───────────────────────────────────────────── */
+  /* ── 7. INIT ───────────────────────────────────────────── */
   function init() {
     tagElements();
     initObserver();
+    initSectionVideo();
     initParallax();
   }
 

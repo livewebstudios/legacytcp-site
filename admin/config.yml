@@ -31,3 +31,20 @@ collections:
       - { label: "Description", name: "description", widget: "text", hint: "Short excerpt shown on blog listing cards (1-2 sentences)" }
       - { label: "Featured Image", name: "thumbnail", widget: "image", required: false, hint: "Optional hero/card image. Recommended 1200x630px." }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "newsletter_popup"
+    label: "Newsletter Popup"
+    files:
+      - label: "Homepage Newsletter Popup"
+        name: "homepage_newsletter_popup"
+        file: "newsletter-popup.json"
+        fields:
+          - { label: "Enable Popup", name: "enabled", widget: "boolean", default: true }
+          - { label: "Headline", name: "headline", widget: "string", default: "Sign up for our newsletter" }
+          - { label: "Message", name: "message", widget: "text", default: "Get trusted updates from our team on financial planning, estate strategies, and insurance insights." }
+          - { label: "Button Text", name: "button_text", widget: "string", default: "Sign Up" }
+          - { label: "Footer Link Text", name: "link_text", widget: "string", required: false, default: "Explore our services" }
+          - { label: "Footer Link URL", name: "link_url", widget: "string", required: false, default: "/services/" }
+          - { label: "Privacy Note", name: "privacy_note", widget: "text", required: false, default: "We respect your privacy and never share your information." }
+          - { label: "Mailchimp Script URL", name: "mcjs_src", widget: "string", required: false, default: "https://chimpstatic.com/mcjs-connected/js/users/824efe07cd6fb72c128487358/5e1343a6e2d88ff1f8be644ab.js" }
+          - { label: "Form Action URL", name: "form_action", widget: "string", hint: "Mailchimp form action URL" }
+          - { label: "Hidden Fields HTML", name: "hidden_fields_html", widget: "text", required: false, hint: "Paste Mailchimp hidden fields HTML here" }

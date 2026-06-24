@@ -371,6 +371,56 @@
     </div>
   </footer>
 
+  <div id="newsletterPopupOverlay" class="newsletter-popup-overlay" hidden>
+    <div class="newsletter-popup" role="dialog" aria-modal="true" aria-labelledby="newsletterPopupTitle">
+      <button type="button" class="newsletter-popup-close" id="newsletterPopupClose" aria-label="Close newsletter popup">×</button>
+      <div class="newsletter-popup-video-wrapper" aria-hidden="true">
+        <video autoplay muted loop playsinline class="newsletter-popup-video" src="video/ani-bg.mp4"></video>
+      </div>
+
+      <!-- White frame with navy inner border -->
+      <div class="newsletter-popup-frame">
+        <div class="newsletter-popup-body">
+
+          <!-- Left: photo (50%) - replace images/popup-left.jpg with your image file -->
+          <div class="newsletter-popup-photo" aria-hidden="true">
+            <img src="images/phonehand.jpg" alt="Newsletter photo">
+          </div>
+
+          <!-- Right: content (50%) -->
+          <div class="newsletter-popup-form">
+            <div class="newsletter-popup-header">
+              <h2 id="newsletterPopupTitle">Sign up for our newsletter</h2>
+              <p id="newsletterPopupDescription">Get trusted updates from our team on financial planning, estate strategies, and insurance insights.</p>
+            </div>
+
+            <form id="newsletterPopupForm" method="post" target="_blank" novalidate>
+              <div class="newsletter-field-group">
+                <label for="newsletterEmail">Email address</label>
+                <input id="newsletterEmail" name="EMAIL" type="email" placeholder="Enter your email" required>
+              </div>
+              <div id="newsletterHiddenFields" class="newsletter-hidden-fields"></div>
+
+              <div class="button-wrap">
+                <button class="brand-button" type="submit" id="newsletterSubmit"><span class="button-text">Sign up</span></button>
+              </div>
+
+              <p class="newsletter-privacy" id="newsletterPopupPrivacy"></p>
+            </form>
+
+            <div class="newsletter-popup-bottom">
+              <div id="newsletterPopupLinkWrap">
+                <a id="newsletterPopupLink" class="newsletter-popup-link" href="/services/">Explore our services</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script>
     // Mobile menu toggle
     const toggle = document.getElementById('mobileToggle');
@@ -383,6 +433,7 @@
 
   <script src="/js/nav2.js"></script>
   <script src="/js/scroll-fx.js"></script>
+  <script src="/js/newsletter-popup.js"></script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function(user) {
