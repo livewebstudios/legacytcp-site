@@ -305,6 +305,40 @@
       <path d="M0,80 C480,0 960,0 1440,80 L1440,80 L0,80 Z"/>
     </svg>
   </div>
+  <!-- ══ CONSULTATION SIGNUP (Mailchimp) ═══════════════════════════ -->
+  <section class="section consult-section" id="consult">
+    <div class="container">
+      <div class="section-inner">
+        <h2 class="section-title">Let's <em>Talk</em></h2>
+        <div class="section-divider"></div>
+        <p class="consult-lead">Tell us a little about yourself and we'll reach out to start the conversation — how we can help protect, grow, and pass on your legacy.</p>
+
+        <form id="mc-consult-form" class="consult-form" action="https://legacytcp.us13.list-manage.com/subscribe/post-json?u=824efe07cd6fb72c128487358&amp;id=69b1be5c2b&amp;f_id=0041d7e0f0" method="post" novalidate>
+          <div class="consult-row">
+            <div class="consult-field">
+              <label for="mc-fname">First Name</label>
+              <input type="text" id="mc-fname" name="FNAME" autocomplete="given-name">
+            </div>
+            <div class="consult-field">
+              <label for="mc-lname">Last Name</label>
+              <input type="text" id="mc-lname" name="LNAME" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="consult-field">
+            <label for="mc-email">Email Address <span class="req">*</span></label>
+            <input type="email" id="mc-email" name="EMAIL" required autocomplete="email">
+          </div>
+          <!-- Mailchimp anti-bot honeypot — leave empty -->
+          <div class="consult-hp" aria-hidden="true">
+            <input type="text" name="b_824efe07cd6fb72c128487358_69b1be5c2b" tabindex="-1" value="" autocomplete="off">
+          </div>
+          <button type="submit" class="consult-btn">Request My Consultation</button>
+          <p class="consult-status" id="mc-consult-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ══ LEGAL DISCLAIMER ═══════════════════════════════════════ -->
   <section class="disclaimer">
     <div class="container">
@@ -387,6 +421,7 @@
 
   <script src="js/nav2.js"></script>
   <script src="js/scroll-fx.js"></script>
+  <script src="js/mc-consult.js"></script>
   <!-- custom newsletter popup script removed; Mailchimp mcjs handles native popup -->
   <script>
     if (window.netlifyIdentity) {
