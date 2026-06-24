@@ -68,9 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
         submitButton.disabled = false;
         submitButton.removeAttribute('title');
       } else {
-        form.action = '';
-        submitButton.disabled = true;
-        submitButton.title = 'Enter your Mailchimp form action URL in Decap to enable submissions';
+        // No Mailchimp action configured. For quick local testing, post to the local thank-you page.
+        // WARNING: this does NOT send data to Mailchimp — replace with Mailchimp form_action to enable real submissions.
+        const testTarget = config.thank_you_url || '/thank-you.html';
+        console.warn('newsletter-popup: no Mailchimp form_action set — using test submit to', testTarget);
+        form.action = testTarget;
+        submitButton.disabled = false;
+        submitButton.title = 'This is a local test submit (not Mailchimp). Replace form_action in newsletter-popup.json to enable Mailchimp.';
       }
 
       if (config.mcjs_src) {
