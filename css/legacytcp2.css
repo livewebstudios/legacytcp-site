@@ -893,7 +893,7 @@ img[style*="border-radius:50%"] {
 .bio-photo-wrap img,
 .team-card img {
   border: 2px solid var(--navy) !important;
-  border-radius: 16px !important;
+  border-radius: 50% !important;
   box-shadow: 4px 4px 16px rgba(27,45,94,.2) !important;
   width: 240px !important;
   height: 240px !important;
@@ -1009,15 +1009,15 @@ img[src*="logo-footer"],
   box-shadow: none !important;
 }
 
-/* Team/bio photos — rounded square (square source portraits) */
+/* Team/bio photos — circle (face-centered square crops) */
 .bio-photo-wrap img {
-  border-radius: 16px !important;
+  border-radius: 50% !important;
   border: 5px solid var(--white) !important;
   box-shadow: 0 8px 32px rgba(27,45,94,.2) !important;
   width: 240px !important;
   height: 240px !important;
   object-fit: cover !important;
-  object-position: 50% 15% !important;
+  object-position: 50% 35% !important;
 }
 .team-card img {
   border-radius: 50% !important;
