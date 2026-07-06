@@ -6,7 +6,7 @@ description: "Many people planning for retirement or financial freedom face a
   common dilemma: should they rely on slowly selling their investments over
   time, or should they focus on creating a steady income from their
   investments?"
-thumbnail: /images/blog/planng.jpg
+thumbnail: /images/blog/coin-clock.jpg
 ---
 ## Need Income?
 
