@@ -8,6 +8,12 @@ description: >-
 
 
   The real question isn’t how much you’ve accumulated— The question is:  Is my wealth protected?  
+
+
+  At Legacy Trust and Capital Partners in Paramus, New Jersey, one of the most common questions we receive is: 
+
+
+  “How can I protect my assets?” 
 thumbnail: /images/blog/hand-orb.jpg
 ---
 You’ve spent years building your home, business, investments, and retirement savings.  
