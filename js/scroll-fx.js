@@ -7,6 +7,17 @@
 (function () {
   'use strict';
 
+  /* ── 0. ROOT PREFIX ────────────────────────────────────── */
+  // Derived from this script's own src, which each page already references at the
+  // correct relative depth (e.g. "../../js/scroll-fx.js" → "../../"). Captured here
+  // at top-level because document.currentScript is only valid during synchronous
+  // execution, not inside the init functions called later.
+  const thisScript = document.currentScript ||
+                     document.querySelector('script[src*="scroll-fx.js"]');
+  const root = thisScript
+    ? thisScript.getAttribute('src').replace(/js\/scroll-fx\.js.*$/, '')
+    : '';
+
   /* ── 1. INJECT FADE-IN CSS ─────────────────────────────── */
   const style = document.createElement('style');
   style.textContent = `
@@ -107,7 +118,9 @@
   function initSectionVideo() {
     const firstWhiteSection = Array.from(document.querySelectorAll('section.section, section.section-offwhite'))
       .find(function (section) {
-        return !section.classList.contains('section-navy') && !section.classList.contains('why-section') && !section.classList.contains('team-section') && !section.classList.contains('disclaimer');
+        // Bio sections are skipped: section-video-bg sets overflow:hidden, which
+        // would clip the bio portrait's negative-margin overhang into the hero.
+        return !section.classList.contains('section-navy') && !section.classList.contains('why-section') && !section.classList.contains('team-section') && !section.classList.contains('disclaimer') && !section.querySelector('.bio-photo-wrap');
       });
 
     if (!firstWhiteSection || firstWhiteSection.querySelector('.section-background-video')) {
@@ -120,7 +133,7 @@
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
-    video.src = '/video/ani-bg.mp4';
+    video.src = root + 'video/ani-bg.mp4';
     video.className = 'section-background-video';
     video.setAttribute('aria-hidden', 'true');
     firstWhiteSection.prepend(video);

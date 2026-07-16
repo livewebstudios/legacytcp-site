@@ -4,13 +4,16 @@
    Mobile toggle wired automatically.
 */
 (function() {
-  // Detect depth from root
-  // Calculate depth accounting for / or / testing prefix
-  const pathParts = window.location.pathname.split('/').filter(Boolean);
-  const testPrefixes = ['newhtml', 'newsite'];
-  const startIdx = testPrefixes.includes(pathParts[0]) ? 1 : 0;
-  const depth = pathParts.length - startIdx;
-  const root  = depth === 0 ? '' : '../'.repeat(depth);
+  // Derive the root prefix from this script's own src attribute. Every page already
+  // references nav2.js at the correct relative depth (e.g. "../../js/nav2.js"), so
+  // stripping "js/nav2.js" leaves exactly the prefix that reaches the site root.
+  // Counting window.location.pathname segments instead breaks on file:// (it counts
+  // the whole filesystem path) and on any URL ending in a filename.
+  const thisScript = document.currentScript ||
+                     document.querySelector('script[src*="nav2.js"]');
+  const root = thisScript
+    ? thisScript.getAttribute('src').replace(/js\/nav2\.js.*$/, '')
+    : '';
  
   const headerHTML = `
   <div class="top-bar">
@@ -177,7 +180,10 @@
  
   // Active nav state
   const path = window.location.pathname;
-  if (path === '/' || path === '/' || path === '/newhtml') {
+  const page = path.split('/').pop();
+  // root === '' means this page sits at the site root. Comparing pathname to '/'
+  // instead never matches on file://, where the URL keeps the full filesystem path.
+  if (root === '' && (page === '' || page === 'index.html')) {
     const el = document.getElementById('nav-home');
     if (el) el.classList.add('active');
   } else if (path.includes('/about-us')) {
