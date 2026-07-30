@@ -60,3 +60,7 @@ A well-designed estate plan provides flexibility. It helps ensure your wishes ca
 The best time to review your estate plan isn't after Congress changes the law, it's before.
 
 Amy Gould has worked in Estate Law, managing her clients' wills, trusts, powers of attorney, and healthcare directives for over twenty years. With Legacy, she can offer you a full financial planning package that includes insurance, wealth advisory, and accounting services on top of your estate planning needs, both for individuals and businesses. When you want to protect your assets, whether in Paramus, New Jersey, or anywhere in the United States, Legacy can help you protect what really matters.
+
+
+
+To reach us for a free consultation, go to legacytcp.com/contact
