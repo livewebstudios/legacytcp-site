@@ -8,43 +8,33 @@ description: Life Settlements allow those 60 and older to stop paying life
   than the policy's surrender value!
 thumbnail: /images/blog/life-settlements-plant.jpg
 ---
-## \    What is a life settlement?    
+## What is a life settlement?
 
-\    A life settlement is the sale of an existing life insurance policy for more than the policy’s cash value but less than the death benefit.    
+A life settlement is the sale of an existing life insurance policy for more than the policy’s cash value but less than the death benefit.    
 
-\    It is estimated that more than $700 billion of life insurance is surrendered or permitted to lapse each year – over $100 billion of which is by seniors. Further, nearly 90% of all Universal Life policies never result in a death claim.    
+It is estimated that more than $700 billion of life insurance is surrendered or permitted to lapse each year – over $100 billion of which is by seniors. Further, nearly 90% of all Universal Life policies never result in a death claim.    
 
-\    On average, life settlements provide **more than** **four times** the policy’s cash surrender value in addition to decreased monthly expenditures for policy premiums.    
+On average, life settlements provide **more than** **four times** the policy’s cash surrender value in addition to decreased monthly expenditures for policy premiums.    
 
-## \    Why would I sell my life insurance policy?    
+## Why would I sell my life insurance policy?
 
-\    There are many reasons policy owners pursue life settlements. Some of the more common reasons include:    
-
-\    
+There are many reasons policy owners pursue life settlements. Some of the more common reasons include:        
 
 * The original purpose for the policy no longer exists.
 * Estate, business, or financial needs have changed.
 * Liquidity is needed.
 * Premium payments have become unaffordable
 
-
-
-## \    Who qualifies?    
-
-\    
+## Who qualifies?
 
 * Insureds 60 years or older living in the United States.
 * Younger insureds with health impairments or terminal conditions may also qualify
 * Any policy type with a death benefit of $100k or greater and issued by a U.S. carrier may qualify
 * There is no minimum or maximum life expectancy.
 
+## How can I use the proceeds?
 
-
-## \    How can I use the proceeds?    
-
-\    There are no restrictions on how the proceeds of a life settlement can be used. Some common uses are:    
-
-\    
+There are no restrictions on how the proceeds of a life settlement can be used. Some common uses are:    
 
 * Investments and financial planning
 * Cover medical or long-term care costs.
@@ -52,12 +42,6 @@ thumbnail: /images/blog/life-settlements-plant.jpg
 * Generate liquidity for large purchases or travel.
 * Provide immediate financial support for their family.
 
-
-
 To learn more, reach out to Marc Blatt, Legacy Trust & Capital Partners’ head of insurance, or go to [legacytcp.com/contact](http://legacytcp.com/contact)     
 
-\    Marc Blatt • mblatt@legacytcp.com • (201) 277-2100    
-
-
-
-\
+Marc Blatt • mblatt@legacytcp.com • (201) 277-2100
